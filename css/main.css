@@ -1,0 +1,271 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: rgba(2, 2, 2, 0.6);
+  padding: 10px 15px;
+}
+.btn.clicked {
+  background-color: #fff;
+  color: rgb(2, 2, 2);
+}
+
+.show {
+  opacity: 1;
+}
+
+.displayNone {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: saturate(0.5) blur(2px);
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #ccc;
+  font-size: 27px;
+  font-weight: bold;
+  text-shadow: 0px 0px 4px #000;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 70px);
+}
+.content .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  border-bottom: 1px solid rgb(92, 92, 92);
+  padding: 10px;
+  background-color: rgba(2, 2, 2, 0.5);
+  transition: 0.4s linear;
+}
+.content .card:nth-of-type(2) {
+  top: 25%;
+}
+.content .card:nth-of-type(3) {
+  top: 50%;
+}
+.content .card:nth-of-type(4) {
+  top: 75%;
+}
+.content .card.active {
+  top: 0%;
+  height: 100%;
+}
+.content .card .cardName {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 137px;
+  height: 42px;
+  font-size: 30px;
+  text-shadow: 0px 0px 2px #ccc;
+  transition: 0.4s linear;
+}
+.content .card .cardName.active {
+  width: 100%;
+  text-align: center;
+}
+.content .card .more {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 50px;
+  flex-direction: column;
+  transition: 0.4s linear;
+}
+.content .card .more.active {
+  width: 100%;
+  height: 25%;
+}
+.content .card .more .name {
+  text-shadow: 0px 0px 2px #ccc;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+.content .card .more .name.show {
+  opacity: 1;
+}
+.content .card .more p {
+  opacity: 0;
+  transition: 0.2s linear;
+}
+.content .card .more p.show {
+  opacity: 1;
+}
+.content .card .more .concept {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content .card .more .concept .btn {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  width: 80px;
+  opacity: 0;
+  transition: 0.2s linear;
+}
+.content .card .more .concept .btn.show {
+  opacity: 1;
+  transform: translateY(-130%);
+}
+.content .card .more .filter {
+  width: 100%;
+  height: 90%;
+  justify-content: space-between;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+.content .card .more .filter.show {
+  opacity: 1;
+}
+.content .card .more .filter li {
+  width: 22%;
+  height: 100%;
+  flex-direction: column;
+}
+.content .card .more .filter li .circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 3px;
+  box-shadow: 1px 1px 3px #ccc;
+  opacity: 0.5;
+  transition: 0.4s linear;
+}
+.content .card .more .filter li .circle.clicked {
+  opacity: 1;
+}
+.content .card .more .filter li .fname {
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+  transition: 0.4s linear;
+}
+.content .card .more .filter li .fname.clicked {
+  color: #fff;
+  text-shadow: 0px 0px 3px #fff;
+}
+.content .card .cardImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  filter: saturate(1.5);
+  overflow: hidden;
+  border-radius: 0 0 20px 0;
+  box-shadow: 0px 0px 5px rgba(204, 204, 204, 0.603);
+  transition: 0.4s linear;
+}
+.content .card .cardImg.active {
+  top: 47px;
+  width: 100%;
+  height: 55%;
+}
+.content .card .cardImg .imgFilter {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.content .card .cardImg .imgFilter.show {
+  opacity: 1;
+}
+.content .card .cardImg img {
+  transition: 0.3s linear;
+}
+.content .card .back,
+.content .card .gallery {
+  position: absolute;
+  top: 0;
+  width: 90px;
+  padding: 5px;
+  opacity: 0;
+  transition: 0.2s linear;
+}
+.content .card .back.show,
+.content .card .gallery.show {
+  opacity: 1;
+}
+.content .card .gallery {
+  right: 0;
+}
+.content .galleryBox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  background-color: rgba(204, 204, 204, 0.7);
+  transition: 0.4s linear;
+  transform: translateX(100%);
+}
+.content .galleryBox.show {
+  transform: translateX(0%);
+}
+.content .galleryBox .nameBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+.content .galleryBox .nameBox h2 {
+  font-size: 25px;
+}
+.content .galleryBox .nameBox .closeBtn {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 20px;
+}
+.content .galleryBox .gallery {
+  width: 100%;
+  height: calc(100% - 40px);
+  overflow-y: scroll;
+}
+.content .galleryBox .gallery .imgBox {
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
