@@ -1,3 +1,14 @@
+@keyframes flowAni {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 .center {
   display: flex;
   justify-content: center;
@@ -40,6 +51,9 @@ body > img {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   filter: saturate(0.5) blur(2px);
 }
 
@@ -199,6 +213,70 @@ header {
   width: 100%;
   height: 55%;
 }
+.content .card .cardImg .loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(204, 204, 204, 0.87);
+  opacity: 0;
+  color: #fff;
+  transition: 0.3s linear;
+}
+.content .card .cardImg .loading.active {
+  opacity: 1;
+  z-index: 99;
+}
+.content .card .cardImg .loading ul {
+  width: 100%;
+  font-size: 10vw;
+}
+.content .card .cardImg .loading ul li {
+  margin-right: 2px;
+  animation-delay: 0;
+}
+.content .card .cardImg .loading ul li:nth-of-type(1) {
+  animation: flowAni linear infinite 0.7s;
+  animation-delay: 0s;
+}
+.content .card .cardImg .loading ul li:nth-of-type(2) {
+  animation: flowAni linear infinite 0.7s;
+  animation-delay: 0.1s;
+}
+.content .card .cardImg .loading ul li:nth-of-type(3) {
+  animation: flowAni linear infinite 0.7s;
+  animation-delay: 0.2s;
+}
+.content .card .cardImg .loading ul li:nth-of-type(4) {
+  animation: flowAni linear infinite 0.7s;
+  animation-delay: 0.3s;
+}
+.content .card .cardImg .loading ul li:nth-of-type(5) {
+  animation: flowAni linear infinite 0.7s;
+  animation-delay: 0.4s;
+}
+.content .card .cardImg .loading ul li:nth-of-type(6) {
+  animation: flowAni linear infinite 0.7s;
+  animation-delay: 0.5s;
+}
+.content .card .cardImg .loading ul li:nth-of-type(7) {
+  animation: flowAni linear infinite 0.7s;
+  animation-delay: 0.6s;
+}
+.content .card .cardImg .loading ul li:nth-of-type(8) {
+  animation: flowAni linear infinite 0.7s;
+  animation-delay: 0.7s;
+}
+.content .card .cardImg .loading ul li:nth-of-type(9) {
+  animation: flowAni linear infinite 0.7s;
+  animation-delay: 0.8s;
+}
+.content .card .cardImg .loading ul li:nth-of-type(10) {
+  animation: flowAni linear infinite 0.7s;
+  animation-delay: 0.9s;
+}
 .content .card .cardImg .imgFilter {
   position: absolute;
   top: 0px;
@@ -251,6 +329,7 @@ header {
 }
 .content .galleryBox .nameBox h2 {
   font-size: 25px;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.686);
 }
 .content .galleryBox .nameBox .closeBtn {
   position: absolute;

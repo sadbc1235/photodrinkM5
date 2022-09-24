@@ -148,6 +148,7 @@ export const clickConcept = (e, con, boothImgSrc) => {
   const circle = filter.querySelectorAll(".circle");
   const fname = filter.querySelectorAll(".fname");
   const cardImg = card.querySelector(".cardImg");
+  const loading = cardImg.querySelector(".loading");
   const imgFilter = cardImg.querySelectorAll(".imgFilter");
   const imgEl = cardImg.querySelector("img");
 
@@ -166,6 +167,7 @@ export const clickConcept = (e, con, boothImgSrc) => {
   explain.classList.remove("show");
 
   imgEl.style.opacity = 0;
+  loading.classList.add("active");
   setTimeout(() => {
     if(con == "neon") {
       imgEl.setAttribute("src", boothImgSrc.neon);
@@ -180,6 +182,7 @@ export const clickConcept = (e, con, boothImgSrc) => {
     }
     imgEl.addEventListener("load", () => {
       imgEl.style.opacity = 1;
+      loading.classList.remove("active");
       setTimeout(() => {
         imgFilter[0].classList.add("show");
       }, 300)
