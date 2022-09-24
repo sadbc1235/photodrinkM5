@@ -123,6 +123,7 @@ header {
   height: 50px;
   flex-direction: column;
   transition: 0.4s linear;
+  cursor: pointer;
 }
 .content .card .more.active {
   width: 100%;
@@ -295,6 +296,40 @@ header {
 }
 .content .card .cardImg img {
   transition: 0.3s linear;
+}
+.content .card .cardImg .visBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 2, 2, 0.3019607843);
+  opacity: 0;
+  z-index: 0;
+}
+.content .card .cardImg .visBox.showVis {
+  opacity: 1;
+  z-index: 99;
+}
+.content .card .cardImg .visBox .visualizer {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-54%, -80%);
+}
+.content .card .cardImg .visBox .visualizer .visualizer-container__bar {
+  background: white;
+  box-shadow: 0px 0px 5px #fd0011, inset 0px 0px 5px #c92933;
+  border-radius: 3px;
+  margin: 0 2px;
+  width: 9px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 4px;
+  opacity: 1;
 }
 .content .card .back,
 .content .card .gallery {
