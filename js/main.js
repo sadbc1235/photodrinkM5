@@ -16,6 +16,14 @@ import {
   mainImgSrc
 } from "./filter.js"
 
+const clickEvent = (() => {
+  if('ontouchstart' in document.documentElement === true) {
+    return 'touchstart';
+  } else {
+    return 'click'
+  }
+})()
+
 const cards = document.querySelectorAll(".card");
 const moreBtn = document.querySelectorAll(".moreBtn");
 const back = document.querySelectorAll(".back");
@@ -23,7 +31,7 @@ const gallery = document.querySelectorAll(".gallery");
 const closeBtn = document.querySelector(".closeBtn");
 
 // bust shot
-moreBtn[0].addEventListener("click", (e) => {
+moreBtn[0].addEventListener(clickEvent, (e) => {
   clickMore(e);
   loadGallery(25, 'bust');
 })

@@ -139,6 +139,9 @@ header {
 .content .card .more p.show {
   opacity: 1;
 }
+.content .card .more p span {
+  font-weight: bold;
+}
 .content .card .more .concept {
   position: absolute;
   top: 0;

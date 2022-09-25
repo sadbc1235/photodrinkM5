@@ -147,6 +147,10 @@ header {
         &.show {
           opacity: 1;
         }
+
+        span {
+          font-weight: bold;
+        }
       }
 
       .concept {
