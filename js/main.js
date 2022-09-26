@@ -29,9 +29,14 @@ const moreBtn = document.querySelectorAll(".moreBtn");
 const back = document.querySelectorAll(".back");
 const gallery = document.querySelectorAll(".gallery");
 const closeBtn = document.querySelector(".closeBtn");
+const button = document.getElementById("button");
 
 // bust shot
-moreBtn[0].addEventListener('touchstart', (e) => {
+// moreBtn[0].addEventListener('touchstart', (e) => {
+//   clickMore(e);
+//   loadGallery(25, 'bust');
+// })
+button.addEventListener('touchstart', (e) => {
   clickMore(e);
   loadGallery(25, 'bust');
 })
