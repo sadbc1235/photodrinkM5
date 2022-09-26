@@ -36,7 +36,7 @@ const button = document.getElementById("button");
 //   clickMore(e);
 //   loadGallery(25, 'bust');
 // })
-button.addEventListener('touchstart', (e) => {
+button.addEventListener('touchmove', (e) => {
   clickMore(e);
   loadGallery(25, 'bust');
 })
