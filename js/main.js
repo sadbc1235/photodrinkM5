@@ -31,7 +31,7 @@ const gallery = document.querySelectorAll(".gallery");
 const closeBtn = document.querySelector(".closeBtn");
 
 // bust shot
-moreBtn[0].addEventListener(clickEvent, (e) => {
+moreBtn[0].addEventListener('touchstart', (e) => {
   clickMore(e);
   loadGallery(25, 'bust');
 })
@@ -47,7 +47,7 @@ closeBtn.addEventListener("click", (e) => {
 })
 
 // metal
-moreBtn[1].addEventListener("click", (e) => {
+moreBtn[1].addEventListener('touchstart', (e) => {
   clickMore(e);
   loadGallery(26, 'metal');
 })
@@ -63,7 +63,7 @@ closeBtn.addEventListener("click", (e) => {
 })
 
 // full shot
-moreBtn[2].addEventListener("click", (e) => {
+moreBtn[2].addEventListener('touchstart', (e) => {
   clickMore(e);
   loadGallery(26, 'full');
 })
@@ -79,7 +79,7 @@ closeBtn.addEventListener("click", (e) => {
 })
 
 // dynamic
-moreBtn[3].addEventListener("click", (e) => {
+moreBtn[3].addEventListener('touchstart', (e) => {
   clickMore(e);
   loadGallery(8, 'dyna');
 })
